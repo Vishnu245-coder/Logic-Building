@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="logicstask.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: lightgray;
+       
+      }
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box1{
+        border: 1px solid white;
+        border-radius: 10px;
+        height: auto;
+        width: 400px;
+        padding: 10px;
+        margin-top: 5vh;
+        margin-left: 200px;
+    }
+
+    .box1:hover,.box2:hover{
+        box-shadow: 10px 10px 10px black;
+        background-color: #fff;
+      } 
+
+    h4 {
+        text-align: center;
+        color: tomato;
+        background-color: #EAF3FF;
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 8px;
+        margin: 0 20px;
+        margin-bottom: 20px;
+       
+      }
+      label {
+        margin-left: 20px;
+        color: #243B53;
+      }
+    input {
+        margin-bottom: 10px;
+        margin-left: 30px;
+        padding: 5px;
+        border-radius: 5px;
+        width: 200px;
+        border: 1px solid #B8D7FF;
+        background-color: #F8FBFF;
+        color: black;
+      }
+      .bgc{
+        background-color: #EAF8F5;
+        border: #B8E5DB;
+      }
+      .box2 {
+        border: 1px solid white;
+        border-radius: 10px;
+        height: auto;
+        width: 400px;
+        padding: 10px;
+        margin-top: 5vh;
+        margin-left: 20px;
+      }
+      button {
+        width: 50%;
+        background-color: #76AEF5;
+        color: white;
+        border: navajowhite;
+        border-radius: 10px;
+        margin-left: 20%;
+        padding: 10px;
+        font-weight: bold;
+      }
+
+      h1 {
+        text-align: center;
+        color: tomato;
+        background-color: skyblue;
+        padding: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Logics Program</h1>
+    <div class="main">
+        <div class="box1">
+            <h4>Average of 3 numbers using DOM</h4>
+            <label>Enter Number 1 : </label>
+            <input type="text" placeholder="Enter number only" id="Num1" /><br />
+            <label>Enter Number 2 : </label>
+            <input type="text" placeholder="Enter number only" id="Num2" /><br />
+            <label>Enter Number 3 : </label>
+            <input type="text" placeholder="Enter number only" id="Num3" /><br />
+            <label>Average : </label>
+            <input type="text" id="res1" class="bgc" readonly/><br />
+            <button onclick="avgThree()" >Caliculate</button>
+        </div>
+        <div class="box2">
+            <h4>Average of 3 numbers</h4>
+            <label>Enter Number 1 : </label>
+            <input type="text" placeholder="Enter number only" id="n1" /><br />
+            <label>Enter Number 2 : </label>
+            <input type="text" placeholder="Enter number only" id="n2" /><br />
+            <label>Enter Number 3 : </label>
+            <input type="text" placeholder="Enter number only" id="n3" /><br />
+            <label>Average : </label>
+            <input type="text" id="res2" class="bgc" readonly/><br />
+            <button onclick="avgthree()" >Caliculate</button>
+        </div>
+        <div  class="box1">
+            <h4>Sum of N Natual Numbers</h4>
+            <label>Enter N Number : </label>
+            <input type="text" placeholder="Enter number only" id="a1" /><br />
+            <label>Sum of Numbers: </label>
+            <input type="text" id="SumNnatural" class="bgc" readonly/><br />
+            <button onclick="n_sum()" >Caliculate</button>
+        </div>
+        <div  class="box2">
+            <h4>Avg of N Natual Numbers</h4>
+            <label>Enter N Number : </label>
+            <input type="text" placeholder="Enter number only" id="a2" /><br />
+            <label>Avg of Numbers: </label>
+            <input type="text" id="res4" class="bgc" readonly/><br />
+            <button onclick="navg()" >Caliculate</button>
+        </div>
+        <div class="box1">
+            <h4>Finding Profit %</h4>
+            <label>Cost Price   : </label>
+            <input type="text" placeholder="Enter CP" id="cp"><br>
+            <label>Selling Price: </label>
+            <input type="text" placeholder="Enter SP" id="sp"><br>
+            <label>Profit Gain : </label>
+            <input type="text" id="profit" readonly><br>
+            <label>Profit % : </label>
+            <input type="text" id="pp" class="bgc" readonly><br>
+            <button onclick="Profit_per()">Caliculate</button>
+        </div>
+        <div class="box2">
+            <h4>Finding Simple Intrest</h4>
+            <label>Principle Amount: </label>
+            <input type="text" placeholder="Enter Principle Amount" id="Principle"><br>
+            <label>Rate of Intrest: </label>
+            <input type="text" placeholder="Enter Rate of interst" id="Rate"><br>
+            <label>Time  : </label>
+            <input type="text" id="time" ><br>
+            <label>Simple Intrest : </label>
+            <input type="text" id="si" class="bgc" readonly><br>
+            <button onclick="simple_intrest()">Caliculate</button>
+        </div>
+        <div  class="box1">
+            <h4>Finding Missing angle in Triangle</h4>
+            <label>Enter Angel1: </label>
+            <input type="text" placeholder="Enter angle 1" id="angle1" /><br />
+            <label>Enter Angel2: </label>
+            <input type="text" placeholder="Enter angle 2" id="angle2" /><br />
+            <label>Missing angle: </label>
+            <input type="text" id="Angle3" class="bgc" readonly/><br />
+            <button onclick="miss_angle()">Caliculate</button>
+        </div>
+        <div class="box2">
+            <h4>Last Digit of a Number</h4>
+            <label>Number : </label>
+            <input type="text" placeholder="Number Only" id="num"><br>
+            <label>Last Digit  : </label>
+            <input type="text" id="last" class="bgc" readonly><br>
+            <button onclick="lastdigit()">Caliculate</button>
+        </div>
+        <div class="box1">
+            <h4>Removing Digit of a Number</h4>
+            <label>Enter a Number : </label>
+            <input type="text" placeholder="Number Only" id="a3"><br>
+            <label>Without last Digit  : </label>
+            <input type="text" id="rem_last" class="bgc" readonly><br>
+            <button onclick="rem_lastdigit()">Caliculate</button>
+        </div>
+        <div class="box2">
+            <h4>First Digit of a 3 digit Number</h4>
+            <label>Enter a Number : </label>
+            <input type="text" placeholder="Number Only" id="a4"><br>
+            <label>First Digit  : </label>
+            <input type="text" id="first" class="bgc" readonly><br>
+            <button onclick="firstdigit()">Caliculate</button>
+        </div>
+        <div class="box1">
+            <h4>First Digit of a 5 digit Number</h4>
+            <label>Enter a Number : </label>
+            <input type="text" placeholder="Number Only" id="a5"><br>
+            <label>First Digit  : </label>
+            <input type="text" id="first_digit5" class="bgc" readonly><br>
+            <button onclick="first_digit()">Caliculate</button>
+        </div>
+        <div class="box2">
+            <h4>Fahtenheit to Celsius Convert</h4>
+            <label>Enter Fahrenheit  : </label>
+            <input type="text" placeholder="Enter Fahrenheit deg" id="a7"><br>
+            <label>Celsius  : </label>
+            <input type="text" id="Celsius" class="bgc" readonly><br>
+            <button onclick="fahrento_Celsius()">Caliculate</button>
+        </div>
+        <div class="box1">
+            <h4>Celsius to Fahtenheit Convert</h4>
+            <label>Enter Celsius  : </label>
+            <input type="text" placeholder="Enter Celsius deg" id="a8"><br>
+            <label>Fahrenheit  : </label>
+            <input type="text" id="Fahrenheit" class="bgc" readonly><br>
+            <button onclick="Celsius_fahrento()">Caliculate</button>
+        </div>
+        <div class="box2">
+          <h4>Gross Salary</h4>
+          <label>Basic Sal:</label>
+          <input type="text" placeholder="Basic Salary" id="salary"><br>
+          <label>HRA Amonut:</label>
+          <input type="text" placeholder="HRA " id="hra"><br>
+          <label>DA Amount:</label>
+          <input type="text" placeholder="D" id="da"><br>
+          <label>Gross Salary: </label>
+          <input type="text" id="Gross" class="bgc" readonly><br>
+          <button onclick="gross()">Caliculate</button>
+        </div>
+        <div class="box1">
+          <h4>Swaping 2 Numbers Using 3rd Var</h4>
+          <label>Before Swap A:</label>
+          <input type="text" placeholder="Enter Number 1" id="var1"><br>
+          <label>Before Swap B:</label>
+          <input type="text" placeholder="Enter number 2" id="var2"><br>
+          <p>After Swaping</p>
+          <label>After Swap A:</label>
+          <input type="text"  id="swap" class="bgc" readonly><br>
+          <label>After Swap B: </label>
+          <input type="text" id="swap2" class="bgc" readonly><br>
+          <button onclick="swap_twovar()">Caliculate</button>
+        </div>
+        <div class="box2">
+          <h4>Swaping 2 Numbers Not Using 3rd Var</h4>
+          <label>Before Swap A:</label>
+          <input type="text" placeholder="Enter Number 1" id="var11"><br>
+          <label>Before Swap B:</label>
+          <input type="text" placeholder="Enter number 2" id="var22"><br>
+          <p>After Swaping</p>
+          <label>After Swap A:</label>
+          <input type="text"  id="swap1" class="bgc" readonly><br>
+          <label>After Swap B: </label>
+          <input type="text" id="swap12" class="bgc" readonly><br>
+          <button onclick="swap()">Caliculate</button>
+        </div>
+    </div>   
+  </body>
+</html>
